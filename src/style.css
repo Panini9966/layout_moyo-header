@@ -14,34 +14,50 @@ body {
   border-bottom: 1px solid #fff;
   height: 60px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 10px 50px;
+  padding: 0 50px;
+}
+
+.header__logo {
+  display: block;
+  width: 40px;
+  height: 40px;
 }
 
 nav ul {
   display: flex;
   padding: 0;
+  margin: 0;
   list-style: none;
+}
+
+nav li:not(:last-child) {
+  padding-right: 20px;
 }
 
 nav a {
   text-decoration: none;
   color: black;
-  height: 15px;
-  padding: 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
   text-transform: uppercase;
+  font-size: 14px;
 }
 
 .is-active {
   position: relative;
+  color: #00acdc;
 }
 
 .is-active::after {
   content: '';
-  top: 53px;
-  left: 0;
+  bottom: 0;
   width: 100%;
   height: 4px;
   background-color: #00acdc;
   border-radius: 2px;
+  position: absolute;
 }
